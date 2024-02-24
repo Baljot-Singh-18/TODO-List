@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+#background {
+    width: 100%;
+    height: 35vh;
+    background: linear-gradient(
+        115deg,
+        rgba(255, 192, 203, .75),
+        rgba(0, 0, 255, .75)
+    ), url("https://miro.medium.com/v2/resize:fit:1200/1*6Jp3vJWe7VFlFHZ9WhSJng.jpeg") no-repeat center center/ cover;
+    box-shadow: 0 0 10px black;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 90vh;
+    border-radius: 15px;
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-family: 'Signika', sans-serif;
+}
+
+h1 {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px black;
+}
+
+#insertTask {
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#insertTask:focus, #checkBtn:focus, #insertBtn:focus {
+    outline: none;
+}
+
+fieldset {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0 0 5px black;
+}
+
+.fa-circle {
+    color: rgba(0, 0, 0, .0);
+    border: 2px solid grey;
+    border-radius: 1cm;
+    margin: 0 6px 0 10px;
+    padding: 4px 4px;
+}
+
+.fa-check {
+    background: linear-gradient(
+        115deg,
+        rgba(255, 192, 203, .75),
+        rgba(0, 0, 255, .75)
+    );
+    text-shadow: 0 0 3px black;
+    color: #fff;
+    padding: 4.5px 5.5px;
+    border: 2px solid white;
+    border-radius: 1cm;
+    margin: 0 4px -3px 10px;
+    font-size: 15px;
+}
+
+.fa-x, .fa-plus {
+    color: grey;
+    padding: 0 15px;
+    font-size: 18px;
+}
+
+.fa-x {
+    display: none;
+}
+
+.deleteBtn {
+    border: none;
+    background: transparent;
+}
+
+.deleteBtn:hover {
+    cursor: pointer;
+}
+
+.checkBtn {
+    background: transparent;
+    border: none;
+}
+
+#tasks {
+    display: flex;
+    row-gap: 5px;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    margin-top: 30px;
+    border-radius: 10px 10px 0 0;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    box-shadow: 0 0 10px black;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+#empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+#empty > p {
+    color: grey;
+    font-style: italic;
+    font-size: 25px;
+}
+
+#tasks::-webkit-scrollbar {
+    display: none;
+}
+
+#tasks fieldset {
+    border: 1px solid grey;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+#container > p {
+    font-family: 'Signika', sans-serif;
+    color: grey;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#insertBtn {
+    border: 0;
+    background: transparent;
+}
+
+#insertBtn:hover, .checkBtn:hover {
+    cursor: pointer;
+}
+
+#options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    font-weight: bold;
+    color: #90909a;
+    background-color: #fff;
+    box-shadow: 0 0 10px black;
+    border-radius: 0 0 10px 10px;
+}
+
+#options input {
+    display: none;
+}
+
+#sort {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#options label:hover, #clear:hover {
+    cursor: pointer;
+    color: #525161;
+    transition: .4s ease;
+}
+
+#clear {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    text-align: right;
+    font-weight: bold;
+    color: #90909a;
+}
+
+.active{
+    color: #3329ca;
+}

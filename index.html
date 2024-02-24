@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&family=Signika:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Todo List</title>
+    </head>
+    <body>
+        <div id="background"></div>
+        <div id="container">
+            <h1>T  O  D  O</h1>
+            <fieldset>
+                <button class="checkBtn">
+                    <i class="fa-solid fa-circle"></i>
+                </button>
+                <input type="text" id="insertTask" placeholder="Enter your task here">
+                <button id="insertBtn">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </fieldset>
+            <div id="tasks">
+                <div id="empty">
+                    <p>No tasks added</p>
+                </div>
+            </div>
+            <div id="options">
+                <p id="pending">
+                    
+                </p>
+                <div id="sort">
+                    <div class="input">
+                        <input type="radio"  name="sort" id="all" value="All" checked>
+                        <label for="all" class="active">All</label>
+                    </div>
+                    <div class="input">
+                        <input type="radio" name="sort" id="active" value="active">
+                        <label for="active">Active</label>
+                    </div>
+                    <div class="input">
+                        <input type="radio" name="sort" id="completed" value="Completed">
+                        <label for="completed">Completed</label>
+                    </div>
+                </div>
+                <button id="clear">Clear Completed</button>
+            </div>
+            <p>Drag and drop to reorder list</p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
